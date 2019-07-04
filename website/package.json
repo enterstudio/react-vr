@@ -4,7 +4,9 @@
     "export": "node server/generate.js",
     "server": "node server/httpserver.js",
     "test": "jest",
-    "gh-pages": "node publish-gh-pages.js"
+    "gh-pages": "node publish-gh-pages.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "babel-core": "^6.6.4",
@@ -30,10 +32,12 @@
     "react-page-middleware": "0.4.1",
     "remove-markdown": "^0.1.0",
     "request": "^2.69.0",
-    "semver-compare": "^1.0.0"
+    "semver-compare": "^1.0.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "cross-env": "^3.2.4",
     "jest": "^15.1.1"
-  }
+  },
+  "snyk": true
 }
